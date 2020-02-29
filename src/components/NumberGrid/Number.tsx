@@ -33,7 +33,11 @@ export default class Number extends React.Component<INumberProps, INumberState> 
 
   getNumber(){
     if (this.state.checked) {
-      return 'X'
+      return (
+        <span className={theme.checkedNumber}>
+         X
+        </span>
+      )
     }
     return this.props.number
   }
