@@ -47,8 +47,8 @@ export default class NumberGrid extends React.Component<INumberGridProps> {
   render() {
 
     return (
-      <div className={theme.numberGrid}>
-        <table>
+      <div className={theme.numberGrid} >
+        <table className ={theme.numTable}>
           {this.getGrid()}
         </table>
       </div>
