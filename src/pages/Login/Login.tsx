@@ -33,6 +33,7 @@ export default class Login extends React.Component {
       returnValue.push(
         <div style={{ display: 'inline-block', margin: 'auto 6px' }}>
           <Ball
+            extra={i===6}
             number={this.number[i]}
           />
         </div>,

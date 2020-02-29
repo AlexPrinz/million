@@ -5,10 +5,13 @@
   border-radius: 50%;
   height: var(--size);
   width: var(--size);
-  background: radial-gradient(circle at 50px 50px, #ffffff, rgb(189, 183, 183));
+  background: radial-gradient(circle at 50px 50px, white, rgb(189, 183, 183));
   justify-content: center;
   align-items: center;
+}
 
+.extraBall{
+  background: radial-gradient(circle at 50px 50px, yellow, #ffb900);
 }
 
 .number{
