@@ -31,11 +31,18 @@ export default class Number extends React.Component<INumberProps, INumberState> 
     this.setState({ checked: !this.state.checked });
   }
 
+  getNumber(){
+    if (this.state.checked) {
+      return 'X'
+    }
+    return this.props.number
+  }
+
   render() {
 
     return (
       <div onClick={this.onCheck} className={theme.number}>
-        {this.props.number}
+        {this.getNumber()}
       </div>
     );
   }
