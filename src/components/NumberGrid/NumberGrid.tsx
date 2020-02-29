@@ -4,6 +4,7 @@ import { clone, isFunction } from 'lodash';
 
 import { computed, observable } from 'mobx';
 import { inject, observer } from 'mobx-react';
+import Number from './Number';
 import * as theme from './theme.scss';
 
 
@@ -20,7 +21,7 @@ export default class NumberGrid extends React.Component<INumberGridProps> {
     for (let i = 1; i < 7; i++) {
       const val = (
         <td>
-          {startValue + i}
+          <Number number={startValue + i} />
         </td>
       );
       returnValue.push(val);
