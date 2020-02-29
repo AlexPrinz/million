@@ -11,15 +11,21 @@ import StarfieldAnimation from 'react-starfield-animation';
 import * as theme from './theme.scss';
 
 
+import { observable } from 'mobx';
+import { inject, observer } from 'mobx-react';
 
-
+@observer
 export default class Login extends React.Component {
 
+  @observable number = [];
 
   getStyle(): Object {
     return { '--background': `url( ${BACKGROUND_IMAGE} )` };
   }
 
+  onChange = (number: [number]) => {
+    this.number = number;
+  }
 
   public render(): JSX.Element {
 
@@ -30,7 +36,9 @@ export default class Login extends React.Component {
         <div className={theme.content}>
           <NumberGrid
             number={5}
+            onChange={this.onChange}
           />
+          {JSON.stringify(this.number)}
         </div>
         <div className={theme.footer}>
         </div>

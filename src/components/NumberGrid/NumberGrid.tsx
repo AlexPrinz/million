@@ -10,18 +10,48 @@ import * as theme from './theme.scss';
 
 interface INumberGridProps {
   number: number;
+  onChange: ([number]) => void;
+}
+
+interface INumberGridState {
+  numbers: [number];
 }
 
 @observer
-export default class NumberGrid extends React.Component<INumberGridProps> {
+export default class NumberGrid extends React.Component<INumberGridProps, INumberGridState> {
 
+  constructor(props) {
+    super(props);
+    this.state = { numbers: [] as any as [number] };
+  }
+
+  numberChecked = (number, check) => {
+    let num: [number] = this.state.numbers;
+    const tmpNum = [];
+    if (check) {
+      num.push(number);
+    } else {
+      for (let i = 0; i < num.length; i++) {
+        if (num[i] !== number) {
+          tmpNum.push(num[i]);
+        }
+      }
+      num = tmpNum as [number];
+    }
+    this.setState({ numbers: num });
+    this.props.onChange(num);
+
+  }
 
   getRowValues(startValue) {
     const returnValue = [];
     for (let i = 1; i < 7; i++) {
       const val = (
         <td>
-          <Number number={startValue + i} />
+          <Number
+            number={startValue + i}
+            onClick={this.numberChecked}
+          />
         </td>
       );
       returnValue.push(val);
