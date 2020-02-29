@@ -28,9 +28,6 @@ export default class Login extends React.Component {
     return (
       <div className={theme.pageWrapper}>
         <div className={theme.content}>
-          <Ball
-            number={5}
-          />
           <NumberGrid
             number={5}
           />
