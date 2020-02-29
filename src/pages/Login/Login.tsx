@@ -27,6 +27,20 @@ export default class Login extends React.Component {
     this.number = number;
   }
 
+  getNumber = () => {
+    const returnValue = [];
+    for (let i = 0; i < this.number.length; i++) {
+      returnValue.push(
+        <div style={{ display: 'inline-block', margin: '6px' }}>
+          <Ball
+            number={this.number[i]}
+          />
+        </div>,
+      );
+    }
+    return returnValue;
+  }
+
   public render(): JSX.Element {
 
     /* tslint:disable */
@@ -38,7 +52,7 @@ export default class Login extends React.Component {
             number={5}
             onChange={this.onChange}
           />
-          {JSON.stringify(this.number)}
+          {this.getNumber()}
         </div>
         <div className={theme.footer}>
         </div>
