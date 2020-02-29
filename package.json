@@ -51,7 +51,7 @@
 		"@types/react-dom": "^16.0.7",
 		"@types/react-router": "^4.0.30",
 		"@types/react-router-dom": "^4.3.0",
-		"axios": "^0.18.0",
+		"axios": "^0.18.1",
 		"babel-polyfill": "^6.26.0",
 		"classnames": "^2.2.6",
 		"css-loader": "^1.0.0",
