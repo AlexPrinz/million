@@ -9,6 +9,7 @@ import * as theme from './theme.scss';
 
 interface INumberProps {
   number: number;
+  disable: boolean;
   onClick: (number, boolean) => void;
 }
 
@@ -27,11 +28,13 @@ export default class Number extends React.Component<INumberProps, INumberState> 
   }
 
   onCheck = () => {
-    this.props.onClick(this.props.number, !this.state.checked);
-    this.setState({ checked: !this.state.checked });
+    if (!this.props.disable || this.state.checked) {
+      this.props.onClick(this.props.number, !this.state.checked);
+      this.setState({ checked: !this.state.checked });
+    }
   }
 
-  getNumber(){
+  getNumber() {
     if (this.state.checked) {
       return (
         <span className={theme.checkedNumber}>
@@ -39,7 +42,7 @@ export default class Number extends React.Component<INumberProps, INumberState> 
         </span>
       )
     }
-    return this.props.number
+    return this.props.number;
   }
 
   render() {

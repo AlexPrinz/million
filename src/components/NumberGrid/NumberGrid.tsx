@@ -49,6 +49,7 @@ export default class NumberGrid extends React.Component<INumberGridProps, INumbe
       const val = (
         <td>
           <Number
+            disable={this.state.numbers.length >= 7}
             number={startValue + i}
             onClick={this.numberChecked}
           />
