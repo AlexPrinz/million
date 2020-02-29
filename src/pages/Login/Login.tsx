@@ -25,9 +25,13 @@ export default class Login extends React.Component {
     /* tslint:disable */
 
     return (
-      <Ball
-        number={5}
-      />
+      <div className={theme.pageWrapper}>
+        <Ball
+          number={5}
+        />
+        <div className={theme.footer}>
+        </div>
+      </div>
     );
   }
 }
