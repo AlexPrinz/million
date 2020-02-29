@@ -1,6 +1,5 @@
 import { COLORS } from '@/constants';
 import { IUser } from '@/models/User';
-import * as md5 from 'md5';
 import { DefaultButton } from 'office-ui-fabric-react/lib/Button';
 import { Callout, DirectionalHint } from 'office-ui-fabric-react/lib/Callout';
 import { Persona, PersonaInitialsColor, PersonaSize } from 'office-ui-fabric-react/lib/Persona';
@@ -31,7 +30,7 @@ export default class UserMenu extends React.Component<IUserMenuProps, IUserMenuS
 
   public render(): JSX.Element {
     // tslint:disable-next-line
-    const imageUrl = `https://secure.gravatar.com/avatar/${md5(this.props.user.email)}`;
+    const imageUrl = `https://secure.gravatar.com/avatar`;
 
     return(
       <div className={theme.personaIcon}>
