@@ -1,5 +1,6 @@
 import Ball from '@/components/Ball';
 import Input from '@/components/Input';
+import NumberGrid from '@/components/NumberGrid';
 import { BACKGROUND_IMAGE } from '@/constants';
 import * as globalTheme from '@/styles/globalTheme.scss';
 import Button from '@material-ui/core/Button';
@@ -26,9 +27,14 @@ export default class Login extends React.Component {
 
     return (
       <div className={theme.pageWrapper}>
-        <Ball
-          number={5}
-        />
+        <div className={theme.content}>
+          <Ball
+            number={5}
+          />
+          <NumberGrid
+            number={5}
+          />
+        </div>
         <div className={theme.footer}>
         </div>
       </div>

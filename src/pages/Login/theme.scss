@@ -2,10 +2,23 @@
   position: relative;
   height: 100vh;
   width: 100vw;
+  overflow: hidden;
+  background: white;
+
+  .content{
+    width: 80%;
+    margin: auto;
+    margin-left: 10%;
+    margin-top: 20px;
+    position: absolute;
+    z-index: 1;
+    background: white;
+    height: 80vh;
+    background: white;
+  }
 
   .footer{
     position: absolute;
-    bottom: -100px;
     height: 100%;
     background-image: url(https://www.win2day.at/media/lotterien_keyvisual_white_background.jpg);
     width: 100%;
