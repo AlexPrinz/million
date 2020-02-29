@@ -3,27 +3,24 @@ import { sortBy } from 'lodash';
 import { action, observable } from 'mobx';
 
 export class LottoStore {
-  @observable ePOUsers: [any];
+  @observable response = false;
+  @observable lastAppearence;
+  @observable bestFittingNumbers;
+  @observable propability;
+  @observable winAmount;
 
-  getCoffeUser = get<{}, [any], void>({
-    endpoint: 'ePO/getUsers',
-    success: (data) => {
-      data.sort((u1, u2) => {
-        return (u2.beans + u2.grounds + u2.water + u2.combo) -
-               (u1.beans + u1.grounds + u1.water + u1.combo);
-      });
-      this.ePOUsers = data;
-    },
-  });
 
-  addPoints = get<{beans: boolean, water: boolean, grounds: boolean}, [any], void>({
-    endpoint: 'ePO/addPoints',
+
+
+  checkNumber = get<{numbers: string}, any, void>({
+    endpoint: '',
     success: (data) => {
-      data.sort((u1, u2) => {
-        return (u2.beans + u2.grounds + u2.water + u2.combo) -
-               (u1.beans + u1.grounds + u1.water + u1.combo);
-      });
-      this.ePOUsers = data;
+      debugger;
+      this.response = true;
+      this.lastAppearence = new Date(data.lastAppearence);
+      this.bestFittingNumbers = data.bestFittingNumbers;
+      this.propability = data.propability;
+      this.winAmount = data.winAmount;
     },
   });
 }

@@ -9,7 +9,6 @@ import * as theme from './theme.scss';
 
 
 interface INumberGridProps {
-  number: number;
   onChange: ([number]) => void;
 }
 

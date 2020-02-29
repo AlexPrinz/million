@@ -8,7 +8,9 @@ import * as theme from './theme.scss';
 
 
 interface IBallProps {
-  number: number;
+  number: number | string;
+  size?: string;
+  hightlight?: boolean;
   extra?: boolean;
 }
 
@@ -17,13 +19,20 @@ export default class Ball extends React.Component<IBallProps> {
 
   render() {
 
-    let className = theme.ball
-    if ( this.props.extra ) {
-      className += " "
+    const size = this.props.size || '120px';
+
+    let className = theme.ball;
+    if (this.props.extra) {
+      className += ' ';
       className += theme.extraBall;
     }
+
+    if (this.props.hightlight) {
+      className += ' ';
+      className += theme.hightlight;
+    }
     return (
-      <div style={{ '--size': '120px' } as React.CSSProperties} className={className}>
+      <div style={{ '--size': size } as React.CSSProperties} className={className}>
         <div className={theme.number}>{this.props.number}</div>
       </div>
     );

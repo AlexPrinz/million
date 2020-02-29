@@ -20,8 +20,8 @@ type Environment = {
 const ENVIRONMENT: Environment = {
   backend: {
     protocol: 'http://',
-    host: '0.0.0.0',
-    port: 8021,
+    host: '192.168.240.187',
+    port: 3000,
   },
   webserver: {
     protocol: 'http://',
