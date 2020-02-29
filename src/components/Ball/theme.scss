@@ -8,6 +8,8 @@
   background: radial-gradient(circle at 50px 50px, white, rgb(189, 183, 183));
   justify-content: center;
   align-items: center;
+  animation: rollIn;
+  animation-duration: 0.8s;
 }
 
 .extraBall{
@@ -24,3 +26,14 @@
   background-color : white;
   color: red;
 }
+
+@keyframes rollIn {
+    0% {
+       opacity: 0;
+       transform: translateX(200%) rotate(240deg);
+    }
+    100% {
+       opacity: 1;
+       transform: translateX(0px) rotate(0deg);
+    }
+ }
