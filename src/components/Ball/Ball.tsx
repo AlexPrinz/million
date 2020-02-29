@@ -20,21 +20,6 @@ export default class Ball extends React.Component<IBallProps> {
       <div className={theme.ball}>
         Hallo
       </div>
-      <div className = {theme.ball} backgroundColor=white>
-      Hello World
-      </div>
-      
-      <table>
-  <tr>
-    <th>Month</th>
-    <th>Savings</th>
-  </tr>
-  <tr>
-    <td>January</td>
-    <td>$100</td>
-  </tr>
-</table>
-
     );
   }
 }
