@@ -14,11 +14,43 @@ interface INumberGridProps {
 @observer
 export default class NumberGrid extends React.Component<INumberGridProps> {
 
+
+  getRowValues(startValue) {
+    const returnValue = [];
+    for (let i = 1; i < 7; i++) {
+      const val = (
+        <td>
+          {startValue + i}
+        </td>
+      );
+      returnValue.push(val);
+    }
+    return returnValue;
+  }
+
+  getGrid() {
+    const returnValue = [];
+    for (let i = 0; i < 7; i++) {
+      const val = (
+        <tr>
+          {this.getRowValues(i * 7)}
+        </tr>
+      );
+      returnValue.push(val);
+    }
+
+    return returnValue;
+  }
+
+
+
   render() {
 
     return (
       <div className={theme.numberGrid}>
-        Hallo
+        <table>
+          {this.getGrid()}
+        </table>
       </div>
     );
   }
