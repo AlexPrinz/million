@@ -45,7 +45,7 @@ export default class NumberGrid extends React.Component<INumberGridProps, INumbe
 
   getRowValues(startValue) {
     const returnValue = [];
-    for (let i = 1; i < 7; i++) {
+    for (let i = 1; i < 8; i++) {
       const val = (
         <td>
           <Number
@@ -79,7 +79,7 @@ export default class NumberGrid extends React.Component<INumberGridProps, INumbe
 
     return (
       <div className={theme.numberGrid} >
-        <table className ={theme.numTable}>
+        <table className={theme.numTable}>
           {this.getGrid()}
         </table>
       </div>
