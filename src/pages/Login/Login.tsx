@@ -31,7 +31,7 @@ export default class Login extends React.Component {
     const returnValue = [];
     for (let i = 0; i < this.number.length; i++) {
       returnValue.push(
-        <div style={{ display: 'inline-block', margin: '6px' }}>
+        <div style={{ display: 'inline-block', margin: 'auto 6px' }}>
           <Ball
             number={this.number[i]}
           />
@@ -48,11 +48,17 @@ export default class Login extends React.Component {
     return (
       <div className={theme.pageWrapper}>
         <div className={theme.content}>
-          <NumberGrid
-            number={5}
-            onChange={this.onChange}
-          />
-          {this.getNumber()}
+          <div style={{ display: 'flex' }}>
+            <div style={{ display: 'flex', marginRight: 24 }}>
+              <NumberGrid
+                number={5}
+                onChange={this.onChange}
+              />
+            </div>
+            <div style={{ display: 'flex' }}>
+              {this.getNumber()}
+            </div>
+          </div>
         </div>
         <div className={theme.footer}>
         </div>

@@ -16,7 +16,7 @@ export default class Ball extends React.Component<IBallProps> {
 
   render() {
     return (
-      <div style={{'--size': '75px'} as React.CSSProperties}className={theme.ball}>
+      <div style={{ '--size': '120px' } as React.CSSProperties} className={theme.ball}>
         <div className={theme.number}>{this.props.number}</div>
       </div>
     );
