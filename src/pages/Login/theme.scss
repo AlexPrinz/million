@@ -1,0 +1,48 @@
+.login{
+  background-color: var(--theme-darkalt);
+  display: table;
+  display: table-cell;
+  vertical-align: middle;
+  background: url(https://www.erstegroup.com/content/dam/at/eh/common/pictures/newsroom/presse/gebaeude/erste-campus-innenhoefe-copyright-erste-bank-christian-wind.jpg) no-repeat center center fixed;
+  height: 100vh;
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+}
+
+.loginActions{
+  .header{
+    background: #275E91;
+    color: white;
+    font-size: 24px;
+    padding: 14px;
+    position: absolute;
+    top: -34px;
+    width: calc( 100% - 14px * 2);
+    left: 0;
+    border-radius: .4rem;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.12);
+  }
+  .inputWrapper{
+    margin-top: 24px;
+    div{
+      width: 100%
+    }
+  }
+  background: 	white;
+  width: 30%;
+  margin: auto;
+  padding: 30px;
+  height: 240px;
+  position: relative;
+
+  border-radius: .4rem;
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.12);
+}
+
+.loginButton{
+  background: #275E91 !important;
+  position: absolute !important;
+  bottom: 30px !important;
+  right: 30px !important;
+}

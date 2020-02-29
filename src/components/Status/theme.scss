@@ -1,0 +1,14 @@
+.status {
+  position: relative;
+  text-align: center;
+  flex: 0 0 auto;
+  .icon{
+    color: var( --white);
+    font-size: calc( var( --size ) * 0.45px );
+    font-weight: 400;
+    line-height: calc( var( --size ) * 1px );
+    height: calc( var( --size ) * 1px );
+    background-color: var( --neutral-tertiary);
+    border-radius: 50%;
+  }
+}
